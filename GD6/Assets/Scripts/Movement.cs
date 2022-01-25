@@ -9,12 +9,15 @@ public class Movement : MonoBehaviour
     public GameObject Hand;
     public bool Slapping = false;
     public float Cooldown = 0.25f;
+    public bool DestroyGhostLeft = false;
+    public bool DestroyGhostRight = false;
 
     void SlapLeft()
     {
         Hand.SetActive(false);
         LeftSlap.SetActive(true);
         Slapping = true;
+        DestroyGhostLeft = true;
         Debug.Log("0");
         StartCoroutine(Wait());
     }
@@ -23,6 +26,7 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("1");
         Slapping = false;
+        DestroyGhostLeft = false;
         Hand.SetActive(true);
         LeftSlap.SetActive(false);
     }
@@ -38,6 +42,7 @@ public class Movement : MonoBehaviour
         Hand.SetActive(false);
         RightSlap.SetActive(true);
         Slapping = true;
+        DestroyGhostRight = true;
         Debug.Log("0");
         StartCoroutine(Waiting());
     }
@@ -46,6 +51,7 @@ public class Movement : MonoBehaviour
     {
         Debug.Log("1");
         Slapping = false;
+        DestroyGhostRight = false;
         Hand.SetActive(true);
         RightSlap.SetActive(false);
     }
