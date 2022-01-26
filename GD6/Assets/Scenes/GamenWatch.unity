@@ -215,6 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 210313315}
+  - component: {fileID: 210313316}
   m_Layer: 0
   m_Name: RightGhost3
   m_TagString: Untagged
@@ -237,6 +238,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &210313316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210313314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d394534bce50b76408b858603cea2123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 0.5
+  thisGhost: {fileID: 210313314}
+  DestroyedGhost: {fileID: 1777872353}
 --- !u!1 &338307223
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 573244478}
+  - component: {fileID: 573244479}
   m_Layer: 0
   m_Name: LeftGhost3
   m_TagString: Untagged
@@ -541,6 +558,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &573244479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573244477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d394534bce50b76408b858603cea2123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alive: 0.5
+  thisGhost: {fileID: 573244477}
+  DestroyedGhost: {fileID: 1592642836}
 --- !u!1 &618914681
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,6 +800,8 @@ MonoBehaviour:
   LeftSlap: {fileID: 800958118}
   RightSlap: {fileID: 636962394}
   Hand: {fileID: 1203395850}
+  LeftGhost3: {fileID: 573244477}
+  RightGhost3: {fileID: 210313314}
   Slapping: 0
   Cooldown: 0.25
   DestroyGhostLeft: 0
@@ -1526,13 +1560,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592642837}
+  - component: {fileID: 1592642838}
   m_Layer: 0
   m_Name: LeftGhostDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1592642837
 Transform:
   m_ObjectHideFlags: 0
@@ -1548,6 +1583,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592642838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592642836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408512c4977d442498cdc0967f59e184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisGhost: {fileID: 1592642836}
+  advance: 0.5
 --- !u!1 &1616618010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,13 +1965,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777872354}
+  - component: {fileID: 1777872355}
   m_Layer: 0
   m_Name: RightGhostDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1777872354
 Transform:
   m_ObjectHideFlags: 0
@@ -1938,6 +1988,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777872355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777872353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408512c4977d442498cdc0967f59e184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThisGhost: {fileID: 1777872353}
+  advance: 0.5
 --- !u!1 &1806222055
 GameObject:
   m_ObjectHideFlags: 0
