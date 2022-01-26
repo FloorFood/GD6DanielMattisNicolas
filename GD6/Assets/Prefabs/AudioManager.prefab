@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4489493528795663372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3720042760112698815}
+  - component: {fileID: 999541460453584421}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3720042760112698815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489493528795663372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999541460453584421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489493528795663372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3adf8edbc0383846a139c6c262bbdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: move ghost
+    clip: {fileID: 8300000, guid: 7df6331b36cd4ef49b3541b3f1d5be7d, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: move hand
+    clip: {fileID: 8300000, guid: abd98f87f7f4ab443ac506e6b9cf2777, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: slap ghost
+    clip: {fileID: 8300000, guid: 1b2882ea4f2eca9459e83bd7894efe30, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: slap miss
+    clip: {fileID: 8300000, guid: c12b9880172fe674cbd713aa31d96999, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: approach 1
+    clip: {fileID: 8300000, guid: 2ecd6e6196716ec458a2da817db5c27c, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: approach 2
+    clip: {fileID: 8300000, guid: 3a9c940f7afe1f948b23c132ed74ca5f, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: approach 3
+    clip: {fileID: 8300000, guid: 406b2b985998fb342b330b0c5be58ea3, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: approach 4
+    clip: {fileID: 8300000, guid: f07e3929fbac75b4a9613a44084df41f, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: jumpscare
+    clip: {fileID: 8300000, guid: a65b1432196d40247bf377a7093660a7, type: 3}
+    mix: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  shouldRandomizePitch: 0
