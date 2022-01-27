@@ -7,17 +7,19 @@ public class LastGhostLeft : MonoBehaviour
     public float alive = 0.5f;
     public GameObject thisGhost;
     public GameObject DestroyedGhost;
+    public GameObject MonsterController;
 
     IEnumerator TouchRemote()
     {
         yield return new WaitForSeconds(alive);
         Debug.Log("Touches remote");
-        Monster();
+        monster();
     }
 
-    void Monster()
+    void monster()
     {
-
+        MonsterController.GetComponent<Monster>().PressRemote();
+        MonsterController.GetComponent<Monster>().CheckRemotePresses();
     }
 
     public void DestroyLeft()

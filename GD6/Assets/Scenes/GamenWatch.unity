@@ -253,6 +253,7 @@ MonoBehaviour:
   alive: 0.5
   thisGhost: {fileID: 210313314}
   DestroyedGhost: {fileID: 1777872353}
+  MonsterController: {fileID: 1817552316}
 --- !u!1 &338307223
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &338307224
 Transform:
   m_ObjectHideFlags: 0
@@ -381,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &467561959
 Transform:
   m_ObjectHideFlags: 0
@@ -573,6 +574,7 @@ MonoBehaviour:
   alive: 0.5
   thisGhost: {fileID: 573244477}
   DestroyedGhost: {fileID: 1592642836}
+  MonsterController: {fileID: 1817552316}
 --- !u!1 &618914681
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1093767806
 Transform:
   m_ObjectHideFlags: 0
@@ -1560,7 +1562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1616618011
 Transform:
   m_ObjectHideFlags: 0
@@ -2041,6 +2043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1817552317}
+  - component: {fileID: 1817552318}
   m_Layer: 0
   m_Name: MonsterController
   m_TagString: Untagged
@@ -2062,6 +2065,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817552318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817552316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674e31479e7c00543bb859b1af821755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite1: {fileID: 2032465348}
+  sprite2: {fileID: 1616618010}
+  sprite3: {fileID: 338307223}
+  sprite4: {fileID: 467561958}
+  Face: {fileID: 1093767805}
+  RemotePresses: 1
+  die: 1.5
 --- !u!1 &1886308596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2032465349
 Transform:
   m_ObjectHideFlags: 0
