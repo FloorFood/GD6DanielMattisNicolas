@@ -7,6 +7,12 @@ public class Ghostspawner : MonoBehaviour
     public GameObject LeftGhost;
     public GameObject RightGhost;
 
+    public float SpawnInterval = 3;
+    public float Spawntime = 0;
+
+    public float TimeIncrease = 10;
+    public float ToIncrease = 0;
+
     void Spawn()
     {
         int rando = Random.Range(0, 2);
@@ -21,10 +27,6 @@ public class Ghostspawner : MonoBehaviour
             RightGhost.SetActive(true);
         }
     }
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,6 +34,29 @@ public class Ghostspawner : MonoBehaviour
         if (Input.GetKeyDown("down"))
         {
             Spawn();
+        }
+
+        Spawntime += Time.deltaTime;
+        ToIncrease += Time.deltaTime;
+
+        if(Spawntime >= SpawnInterval)
+        {
+            Spawn();
+            Spawntime = 0;
+        }
+
+        if(ToIncrease >= TimeIncrease)
+        {
+            if(SpawnInterval <= 0.55)
+            {
+                SpawnInterval = 0.55f;
+                ToIncrease = 0;
+            }
+            else
+            {
+                SpawnInterval -= 0.25f;
+                ToIncrease = 0;
+            }
         }
     }
 }
