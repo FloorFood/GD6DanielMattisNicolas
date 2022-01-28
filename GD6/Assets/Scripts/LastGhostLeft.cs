@@ -14,6 +14,7 @@ public class LastGhostLeft : MonoBehaviour
         yield return new WaitForSeconds(alive);
         Debug.Log("Touches remote");
         monster();
+        thisGhost.SetActive(false);
     }
 
     void monster()
@@ -24,20 +25,26 @@ public class LastGhostLeft : MonoBehaviour
 
     public void DestroyLeft()
     {
-        DestroyedGhost.SetActive(true);
-        Debug.Log("Ghost dies left):");
-        thisGhost.SetActive(false);
+        if (thisGhost.activeInHierarchy)
+        {
+            DestroyedGhost.SetActive(true);
+            Debug.Log("Ghost dies left):");
+            thisGhost.SetActive(false);
+        }
     }
 
     public void DestroyRight()
     {
-        DestroyedGhost.SetActive(true);
-        Debug.Log("Ghost dies right):");
-        thisGhost.SetActive(false);
+        if (thisGhost.activeInHierarchy)
+        {
+            DestroyedGhost.SetActive(true);
+            Debug.Log("Ghost dies right):");
+            thisGhost.SetActive(false);
+        }
     }
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(TouchRemote());
     }

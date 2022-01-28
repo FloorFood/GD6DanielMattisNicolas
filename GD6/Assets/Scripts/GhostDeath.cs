@@ -18,7 +18,7 @@ public class GhostDeath : MonoBehaviour
         ThisGhost.SetActive(false);
     }
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(Travel());
 
