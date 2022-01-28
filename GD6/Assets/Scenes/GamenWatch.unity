@@ -594,7 +594,7 @@ MonoBehaviour:
   RightGhost: {fileID: 1916637701}
   SpawnInterval: 3
   Spawntime: 0
-  TimeIncrease: 10
+  TimeIncrease: 8
   ToIncrease: 0
 --- !u!4 &427295511
 Transform:
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   LeftGhost3: {fileID: 573244477}
   RightGhost3: {fileID: 210313314}
   Slapping: 0
-  Cooldown: 0.25
+  Cooldown: 0.4
   DestroyGhostLeft: 0
   DestroyGhostRight: 0
 --- !u!4 &745247373
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   sprite4: {fileID: 467561958}
   Face: {fileID: 1093767805}
   RemotePresses: 1
-  die: 1.5
+  die: 2
 --- !u!1 &1886308596
 GameObject:
   m_ObjectHideFlags: 0

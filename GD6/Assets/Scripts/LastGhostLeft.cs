@@ -12,7 +12,6 @@ public class LastGhostLeft : MonoBehaviour
     IEnumerator TouchRemote()
     {
         yield return new WaitForSeconds(alive);
-        Debug.Log("Touches remote");
         monster();
         thisGhost.SetActive(false);
     }
@@ -28,7 +27,6 @@ public class LastGhostLeft : MonoBehaviour
         if (thisGhost.activeInHierarchy)
         {
             DestroyedGhost.SetActive(true);
-            Debug.Log("Ghost dies left):");
             thisGhost.SetActive(false);
         }
     }
@@ -38,7 +36,6 @@ public class LastGhostLeft : MonoBehaviour
         if (thisGhost.activeInHierarchy)
         {
             DestroyedGhost.SetActive(true);
-            Debug.Log("Ghost dies right):");
             thisGhost.SetActive(false);
         }
     }

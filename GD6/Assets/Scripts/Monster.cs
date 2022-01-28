@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour
 
     public int RemotePresses = 1;
 
-    public float die = 1.5f;
+    public float die = 2f;
 
     public void PressRemote()
     {
@@ -24,35 +24,30 @@ public class Monster : MonoBehaviour
         if (RemotePresses == 2)
         {
             sprite1.SetActive(true);
-            Debug.Log("2");
         }
 
         if (RemotePresses == 3)
         {
             sprite1.SetActive(false);
             sprite2.SetActive(true);
-            Debug.Log("3");
         }
 
         if (RemotePresses == 4)
         {
             sprite2.SetActive(false);
             sprite3.SetActive(true);
-            Debug.Log("4");
         }
 
         if (RemotePresses == 5)
         {
             sprite3.SetActive(false);
             sprite4.SetActive(true);
-            Debug.Log("5");
         }
 
         if (RemotePresses == 6)
         {
             sprite4.SetActive(false);
             Face.SetActive(true);
-            Debug.Log("6");
             StartCoroutine(Death());
         }
 
