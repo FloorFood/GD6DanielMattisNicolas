@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
         Hand.SetActive(false);
         LeftSlap.SetActive(true);
         Slapping = true;
+        FindObjectOfType<AudioManager>().PlaySound("Slap");
         DestroyGhostLeft = true;
         StartCoroutine(Wait());
     }
@@ -42,6 +43,7 @@ public class Movement : MonoBehaviour
         Hand.SetActive(false);
         RightSlap.SetActive(true);
         Slapping = true;
+        FindObjectOfType<AudioManager>().PlaySound("Slap");
         DestroyGhostRight = true;
         StartCoroutine(Waiting());
     }

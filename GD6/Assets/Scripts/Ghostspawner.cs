@@ -37,7 +37,11 @@ public class Ghostspawner : MonoBehaviour
         }
 
         Spawntime += Time.deltaTime;
-        ToIncrease += Time.deltaTime;
+
+        if(SpawnInterval > 0.5f)
+        {
+            ToIncrease += Time.deltaTime;
+        }
 
         if(Spawntime >= SpawnInterval)
         {
@@ -47,12 +51,6 @@ public class Ghostspawner : MonoBehaviour
 
         if(ToIncrease >= TimeIncrease)
         {
-            if(SpawnInterval <= 0.55)
-            {
-                SpawnInterval = 0.55f;
-                ToIncrease = 0;
-            }
-            else
             {
                 SpawnInterval -= 0.25f;
                 ToIncrease = 0;
