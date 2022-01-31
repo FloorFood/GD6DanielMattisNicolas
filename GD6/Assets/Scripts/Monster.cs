@@ -7,8 +7,8 @@ public class Monster : MonoBehaviour
     public GameObject sprite1;
     public GameObject sprite2;
     public GameObject sprite3;
-    public GameObject sprite4;
     public GameObject Face;
+    public GameObject GhostSpawner;
 
     public int RemotePresses = 1;
 
@@ -41,12 +41,7 @@ public class Monster : MonoBehaviour
         if (RemotePresses == 5)
         {
             sprite3.SetActive(false);
-            sprite4.SetActive(true);
-        }
-
-        if (RemotePresses == 6)
-        {
-            sprite4.SetActive(false);
+            GhostSpawner.SetActive(false);
             Face.SetActive(true);
             StartCoroutine(Death());
         }
