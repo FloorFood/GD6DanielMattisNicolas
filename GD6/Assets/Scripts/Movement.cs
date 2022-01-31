@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public GameObject LeftGhost3;
     public GameObject RightGhost3;
     public bool Slapping = false;
-    public float Cooldown = 0.25f;
+    public float Cooldown = 0.4f;
     public bool DestroyGhostLeft = false;
     public bool DestroyGhostRight = false;
 
