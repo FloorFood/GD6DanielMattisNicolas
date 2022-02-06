@@ -5,10 +5,12 @@ using UnityEngine;
 public class Clean : MonoBehaviour
 {
     public GameObject ThisDirt;
+    public GameObject destruction;
     
     void clean()
     {
         // Play cleaning sound
+        destruction.GetComponent<DestructionCount>().CleaningUpdate();
         ThisDirt.SetActive(false);
     }
 

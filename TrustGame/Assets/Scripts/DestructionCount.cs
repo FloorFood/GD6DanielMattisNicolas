@@ -7,6 +7,13 @@ public class DestructionCount : MonoBehaviour
 {
     public Text destructionText;
     private int DestroyedObjects = 0;
+    private int CleanedDirts = 0;
+
+    public GameObject victory;
+    public GameObject failure;
+    public GameObject player;
+    public GameObject countdown;
+    public GameObject thisObject;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +29,29 @@ public class DestructionCount : MonoBehaviour
 
     public void DestructionUpdate()
     {
-        Debug.Log("+1");
         DestroyedObjects = DestroyedObjects + 1;
+    }
+
+    public void CleaningUpdate()
+    {
+        CleanedDirts = CleanedDirts + 1;
+    }
+
+    public void Rordon()
+    {
+        if (DestroyedObjects == 0 && CleanedDirts == 1)
+        {
+            player.SetActive(false);
+            victory.SetActive(true);
+            countdown.SetActive(false);
+            thisObject.SetActive(false);
+        }
+        else
+        {
+            player.SetActive(false);
+            failure.SetActive(true);
+            countdown.SetActive(false);
+            thisObject.SetActive(false);
+        }
     }
 }

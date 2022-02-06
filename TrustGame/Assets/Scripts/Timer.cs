@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     double countdownInternal;
     bool countdownOver = false;
 
+    public GameObject destruction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +38,9 @@ public class Timer : MonoBehaviour
             if (!countdownOver)
             {
                 countdownOver = true;
-
                 Debug.Log("0");
 
-                //Rordon appears
+                destruction.GetComponent<DestructionCount>().Rordon();
             }
         }
     }
