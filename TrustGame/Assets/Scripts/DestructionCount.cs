@@ -14,6 +14,7 @@ public class DestructionCount : MonoBehaviour
     public GameObject player;
     public GameObject countdown;
     public GameObject thisObject;
+    public GameObject ExplotionImage;
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class DestructionCount : MonoBehaviour
             player.SetActive(false);
             victory.SetActive(true);
             countdown.SetActive(false);
+            ExplotionImage.SetActive(false);
             thisObject.SetActive(false);
         }
         else
@@ -51,6 +53,7 @@ public class DestructionCount : MonoBehaviour
             player.SetActive(false);
             failure.SetActive(true);
             countdown.SetActive(false);
+            ExplotionImage.SetActive(false);
             thisObject.SetActive(false);
         }
     }
