@@ -40,7 +40,7 @@ public class DestructionCount : MonoBehaviour
 
     public void Rordon()
     {
-        if (DestroyedObjects == 0 && CleanedDirts == 1)
+        if (DestroyedObjects == 0 && CleanedDirts == 9)
         {
             player.SetActive(false);
             victory.SetActive(true);
