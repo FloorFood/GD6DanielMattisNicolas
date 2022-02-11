@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534560316475931257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0.053, y: 0.404, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1534560317451290830}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f4b13061fa7b1944784d88806c9f2ddf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1534560317451290830}
   - component: {fileID: 1534560317451290831}
   - component: {fileID: 1534560317451290828}
-  - component: {fileID: 1534560317451290825}
+  - component: {fileID: 2478352872800527277}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1534560317451290829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.3, y: 4.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 1534560316475931256}
   m_Father: {fileID: 0}
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerBody: {fileID: 1534560317451290831}
   MoveSpeed: 4
---- !u!58 &1534560317451290825
-CircleCollider2D:
+--- !u!70 &2478352872800527277
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,6 +164,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0047792494}
-  serializedVersion: 2
-  m_Radius: 0.39007774
+  m_Offset: {x: 0.0070225275, y: -0.028089467}
+  m_Size: {x: 0.8118147, y: 0.42139494}
+  m_Direction: 1
