@@ -18,8 +18,17 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public static AudioManager instance;
     AudioSource[] allMyAudioSources;
+    AudioSource audioSource;
 
     public bool shouldRandomizePitch;
+    private bool firstTimeRunning;
+    private bool hasEnteredSongLoop;
+    private string whatSongIsGonnaPlayNow;
+
+    public string currentScene;
+    private string sceneName;
+    private string lastScene;
+    private string currentSong;
 
     public void Awake()
     {
@@ -46,6 +55,62 @@ public class AudioManager : MonoBehaviour
         }
 
         allMyAudioSources = GetComponents<AudioSource>();
+
+        shouldRandomizePitch = false;
+        firstTimeRunning = true;
+        hasEnteredSongLoop = false;
+    }
+
+    public void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        if (sceneName == "TrustScene" || sceneName == "TutorialScene")
+        {
+            this.currentScene = "Game";
+        }
+        //else if (sceneName == "NAME-OF-MENU-SCENE")
+        //{
+        //    this.currentScene = "Menu";
+        //}
+        //else if (sceneName == "NAME-OF-CUTSCENE-SCENE")
+        //{
+        //    this.currentScene = "Cutscene";
+        //}
+        else
+        {
+            this.currentScene = "Error";
+        }
+
+        if (this.currentScene == "Game")
+        {
+            if (firstTimeRunning)
+            {
+                audioSource = allMyAudioSources[0];
+                //Debug.Log("audioSource: " + audioSource.name);
+                whatSongIsGonnaPlayNow = "MainThemeIntro";
+
+                PlaySong(whatSongIsGonnaPlayNow);
+                firstTimeRunning = false;
+            }
+            else if (!audioSource.isPlaying && firstTimeRunning == false && hasEnteredSongLoop == false)
+            {
+                audioSource = allMyAudioSources[1];
+                //Debug.Log("audioSource: " + audioSource.name);
+                whatSongIsGonnaPlayNow = "MainThemeLoop";
+
+                PlaySong(whatSongIsGonnaPlayNow);
+                hasEnteredSongLoop = true;
+            }
+        }
+        else if (this.currentScene != "Game")
+        {
+            StopSound(whatSongIsGonnaPlayNow);
+            firstTimeRunning = true;
+        }
+
+        lastScene = this.currentScene;
     }
 
     public void PlaySound(string name)
@@ -69,5 +134,31 @@ public class AudioManager : MonoBehaviour
             s.source.Play();
         }
 
+    }
+
+    public void PlaySong(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Song '" + name + "' not found.");
+            return;
+        }
+        currentSong = s.name;
+        s.source.Play();
+    }
+
+    public void StopSound(string sound)
+    {
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound '" + name + "' not found.");
+            return;
+        }
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+
+        s.source.Stop();
     }
 }
