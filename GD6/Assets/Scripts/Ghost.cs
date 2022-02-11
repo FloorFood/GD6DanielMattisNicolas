@@ -14,21 +14,15 @@ public class Ghost : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    void Move()
     {
         NextGhost.SetActive(true);
         ThisGhost.SetActive(false);
     }
 
-    private void Start()
+    void OnEnable()
     {
         StartCoroutine(Travel());
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

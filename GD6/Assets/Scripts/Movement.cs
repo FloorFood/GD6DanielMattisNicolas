@@ -7,8 +7,10 @@ public class Movement : MonoBehaviour
     public GameObject LeftSlap;
     public GameObject RightSlap;
     public GameObject Hand;
+    public GameObject LeftGhost3;
+    public GameObject RightGhost3;
     public bool Slapping = false;
-    public float Cooldown = 0.25f;
+    public float Cooldown = 0.4f;
     public bool DestroyGhostLeft = false;
     public bool DestroyGhostRight = false;
 
@@ -17,14 +19,13 @@ public class Movement : MonoBehaviour
         Hand.SetActive(false);
         LeftSlap.SetActive(true);
         Slapping = true;
+        FindObjectOfType<AudioManager>().PlaySound("Slap");
         DestroyGhostLeft = true;
-        Debug.Log("0");
         StartCoroutine(Wait());
     }
 
     void SlapLeftDone()
     {
-        Debug.Log("1");
         Slapping = false;
         DestroyGhostLeft = false;
         Hand.SetActive(true);
@@ -42,14 +43,13 @@ public class Movement : MonoBehaviour
         Hand.SetActive(false);
         RightSlap.SetActive(true);
         Slapping = true;
+        FindObjectOfType<AudioManager>().PlaySound("Slap");
         DestroyGhostRight = true;
-        Debug.Log("0");
         StartCoroutine(Waiting());
     }
 
     void SlapRightDone()
     {
-        Debug.Log("1");
         Slapping = false;
         DestroyGhostRight = false;
         Hand.SetActive(true);
@@ -69,14 +69,22 @@ public class Movement : MonoBehaviour
         {
             if (Slapping == false)
             SlapLeft();
-            Debug.Log("Left");
         }
 
         if (Input.GetKeyDown("right"))
         {
             if (Slapping == false)
             SlapRight();
-            Debug.Log("Right");
+        }
+
+        if (DestroyGhostLeft == true)
+        {
+            LeftGhost3.GetComponent<LastGhostLeft>().DestroyLeft();
+        }
+
+        if (DestroyGhostRight == true)
+        {
+            RightGhost3.GetComponent<LastGhostLeft>().DestroyRight();
         }
     }
 }
