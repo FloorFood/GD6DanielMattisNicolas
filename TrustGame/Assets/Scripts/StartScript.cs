@@ -10,7 +10,6 @@ public class StartScript : MonoBehaviour
     public void GameStart()
     {
         Player.SetActive(true);
-        //Start music or play cutscene or something
         Panel.SetActive(false);
     }
 }
