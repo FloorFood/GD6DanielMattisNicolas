@@ -9,7 +9,8 @@ public class Clean : MonoBehaviour
     
     void clean()
     {
-        // Play cleaning sound
+        AudioManager.instance.shouldRandomizePitch = true;
+        AudioManager.instance.PlaySound("Clean");
         destruction.GetComponent<DestructionCount>().CleaningUpdate();
         ThisDirt.SetActive(false);
     }

@@ -16,7 +16,17 @@ public class DestructionCount : MonoBehaviour
     public GameObject thisObject;
     public GameObject ExplotionImage;
     public GameObject TotalDestruction;
-    
+    public GameObject video;
+    public GameObject videoLoop;
+    public GameObject restartLoose;
+    public GameObject exitLoose;
+    public GameObject videoWin;
+    public GameObject restartWin;
+    public GameObject exitWin;
+
+    public float videoLenght = 10.14f;
+    public float videolong = 7.37f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,16 +62,46 @@ public class DestructionCount : MonoBehaviour
             countdown.SetActive(false);
             TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
-            thisObject.SetActive(false);
+            PlayWin();
+            //thisObject.SetActive(false);
         }
         else
         {
             player.SetActive(false);
             failure.SetActive(true);
+            
             countdown.SetActive(false);
             TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
-            thisObject.SetActive(false);
+            PlayLoose();
+            //thisObject.SetActive(false);
         }
+    }
+
+    void PlayWin()
+    {
+        videoWin.SetActive(true);
+        StartCoroutine(Wait2(videolong));
+    }
+
+    IEnumerator Wait2(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        restartWin.SetActive(true);
+        exitWin.SetActive(true);
+    }
+
+    void PlayLoose()
+    {
+        video.SetActive(true);
+        StartCoroutine(Wait(videoLenght));
+    }
+
+    IEnumerator Wait(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        videoLoop.SetActive(true);
+        restartLoose.SetActive(true);
+        exitLoose.SetActive(true);
     }
 }
