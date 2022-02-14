@@ -24,7 +24,7 @@ public class DestructionCount : MonoBehaviour
     public GameObject restartWin;
     public GameObject exitWin;
 
-    public float videoLenght = 10.14f;
+    public float videoLenght = 7.8f;
     public float videolong = 7.37f;
 
     // Start is called before the first frame update
@@ -59,6 +59,7 @@ public class DestructionCount : MonoBehaviour
         {
             player.SetActive(false);
             victory.SetActive(true);
+            
             countdown.SetActive(false);
             TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
@@ -81,6 +82,7 @@ public class DestructionCount : MonoBehaviour
     void PlayWin()
     {
         videoWin.SetActive(true);
+        AudioManager.instance.currentScene = "NoLongerGame";
         StartCoroutine(Wait2(videolong));
     }
 
@@ -94,6 +96,7 @@ public class DestructionCount : MonoBehaviour
     void PlayLoose()
     {
         video.SetActive(true);
+        AudioManager.instance.currentScene = "NoLongerGame";
         StartCoroutine(Wait(videoLenght));
     }
 

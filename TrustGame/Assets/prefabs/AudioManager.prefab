@@ -47,14 +47,14 @@ MonoBehaviour:
   - name: MainThemeIntro
     clip: {fileID: 8300000, guid: 35168e74d91770e4694702bf200f4799, type: 3}
     mix: {fileID: 0}
-    volume: 0.32
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: MainThemeLoop
     clip: {fileID: 8300000, guid: 208a025b158dde84daf10f26f39f31e7, type: 3}
     mix: {fileID: 0}
-    volume: 0.32
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}

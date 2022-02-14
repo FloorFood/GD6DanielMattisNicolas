@@ -1168,7 +1168,7 @@ MonoBehaviour:
   videoWin: {fileID: 556832829}
   restartWin: {fileID: 888524779}
   exitWin: {fileID: 73333484}
-  videoLenght: 10.14
+  videoLenght: 7.8
   videolong: 7.37
 --- !u!1001 &144168400
 PrefabInstance:

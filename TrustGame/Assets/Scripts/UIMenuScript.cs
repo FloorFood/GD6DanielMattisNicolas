@@ -8,6 +8,7 @@ public class UIMenuScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("TutorialScene");
+        AudioManager.instance.currentScene = "Game";
     }
 
     public void Quit()
