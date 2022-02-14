@@ -1184,6 +1184,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3585567529421575605, guid: c7fa543504547954d96be5ebd99480bc, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585567529421575605, guid: c7fa543504547954d96be5ebd99480bc, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7fa543504547954d96be5ebd99480bc, type: 3}
 --- !u!1 &772248373
@@ -1975,7 +1983,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013885498, y: -1.4891665}
+  m_Offset: {x: 0.013885498, y: -1.2261156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1986,7 +1994,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3610134, y: 0.82312346}
+  m_Size: {x: 1.3610134, y: 0.29702163}
   m_EdgeRadius: 0
 --- !u!50 &1280777000
 Rigidbody2D:

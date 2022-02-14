@@ -15,6 +15,7 @@ public class DestructionCount : MonoBehaviour
     public GameObject countdown;
     public GameObject thisObject;
     public GameObject ExplotionImage;
+    public GameObject TotalDestruction;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,10 @@ public class DestructionCount : MonoBehaviour
     public void DestructionUpdate()
     {
         DestroyedObjects = DestroyedObjects + 1;
+        if (DestroyedObjects == 36)
+        {
+            TotalDestruction.SetActive(true);
+        }
     }
 
     public void CleaningUpdate()
@@ -45,6 +50,7 @@ public class DestructionCount : MonoBehaviour
             player.SetActive(false);
             victory.SetActive(true);
             countdown.SetActive(false);
+            TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
             thisObject.SetActive(false);
         }
@@ -53,6 +59,7 @@ public class DestructionCount : MonoBehaviour
             player.SetActive(false);
             failure.SetActive(true);
             countdown.SetActive(false);
+            TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
             thisObject.SetActive(false);
         }
