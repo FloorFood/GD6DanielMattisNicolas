@@ -9,6 +9,8 @@ public class DestroyTut : MonoBehaviour
 
     void explode()
     {
+        AudioManager.instance.shouldRandomizePitch = true;
+        AudioManager.instance.PlaySound("Boom");
         Explotion.SetActive(true);
         ThisObject.SetActive(false);
     }
