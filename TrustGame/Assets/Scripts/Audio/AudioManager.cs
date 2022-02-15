@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
     private bool firstTimeRunning;
     private bool hasEnteredSongLoop;
     private string whatSongIsGonnaPlayNow;
+    private int audioCounter;
 
     public string currentScene;
     private string sceneName;
@@ -59,6 +60,7 @@ public class AudioManager : MonoBehaviour
         shouldRandomizePitch = false;
         firstTimeRunning = true;
         hasEnteredSongLoop = false;
+        audioCounter = 0;
 
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
@@ -106,14 +108,26 @@ public class AudioManager : MonoBehaviour
                 PlaySong(whatSongIsGonnaPlayNow);
                 firstTimeRunning = false;
             }
-            else if (!audioSource.isPlaying && firstTimeRunning == false && hasEnteredSongLoop == false)
+            else if (!firstTimeRunning)
             {
-                audioSource = allMyAudioSources[1];
-                //Debug.Log("audioSource: " + audioSource.name);
-                whatSongIsGonnaPlayNow = "MainThemeLoop";
+                if (audioSource.isPlaying && audioCounter > 0)
+                {
+                    audioCounter = 0;
+                }
+                else if (!hasEnteredSongLoop && audioCounter > 1 && !audioSource.isPlaying)
+                {
+                    audioSource = allMyAudioSources[1];
+                    //Debug.Log("audioSource: " + audioSource.name);
+                    whatSongIsGonnaPlayNow = "MainThemeLoop";
 
-                PlaySong(whatSongIsGonnaPlayNow);
-                hasEnteredSongLoop = true;
+                    PlaySong(whatSongIsGonnaPlayNow);
+                    hasEnteredSongLoop = true;
+                    audioCounter = 0;
+                }
+                else if (!audioSource.isPlaying && audioCounter < 2)
+                {
+                    audioCounter++;
+                }
             }
         }
         else if (this.currentScene == "NoLongerGame")
