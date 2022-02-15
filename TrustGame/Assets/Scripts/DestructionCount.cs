@@ -59,7 +59,7 @@ public class DestructionCount : MonoBehaviour
         {
             player.SetActive(false);
             victory.SetActive(true);
-            
+            destructionText.enabled = false;
             countdown.SetActive(false);
             TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);
@@ -70,7 +70,7 @@ public class DestructionCount : MonoBehaviour
         {
             player.SetActive(false);
             failure.SetActive(true);
-            
+            destructionText.enabled = false;
             countdown.SetActive(false);
             TotalDestruction.SetActive(false);
             ExplotionImage.SetActive(false);

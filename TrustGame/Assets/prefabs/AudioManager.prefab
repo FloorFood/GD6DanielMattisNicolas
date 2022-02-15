@@ -68,7 +68,7 @@ MonoBehaviour:
   - name: Boom
     clip: {fileID: 8300000, guid: 85c14a20e34fd5040b0dc2dbfe917a0f, type: 3}
     mix: {fileID: 0}
-    volume: 0.6
+    volume: 0.78
     pitch: 1
     loop: 0
     source: {fileID: 0}
