@@ -11,6 +11,8 @@ public class Destroy : MonoBehaviour
     void Explode()
     {
         destruction.GetComponent<DestructionCount>().DestructionUpdate();
+        AudioManager.instance.shouldRandomizePitch = true;
+        AudioManager.instance.PlaySound("Boom");
         Explotion.SetActive(true);
         ThisObject.SetActive(false);
     }

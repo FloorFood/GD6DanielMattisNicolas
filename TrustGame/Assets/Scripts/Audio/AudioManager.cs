@@ -59,10 +59,7 @@ public class AudioManager : MonoBehaviour
         shouldRandomizePitch = false;
         firstTimeRunning = true;
         hasEnteredSongLoop = false;
-    }
 
-    public void Update()
-    {
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
@@ -70,6 +67,21 @@ public class AudioManager : MonoBehaviour
         {
             this.currentScene = "Game";
         }
+        else
+        {
+            this.currentScene = "Error";
+        }
+    }
+
+    public void Update()
+    {
+        //Scene currentScene = SceneManager.GetActiveScene();
+        //sceneName = currentScene.name;
+
+        //if (sceneName == "TrustScene" || sceneName == "TutorialScene")
+        //{
+        //    this.currentScene = "Game";
+        //}
         //else if (sceneName == "NAME-OF-MENU-SCENE")
         //{
         //    this.currentScene = "Menu";
@@ -78,10 +90,10 @@ public class AudioManager : MonoBehaviour
         //{
         //    this.currentScene = "Cutscene";
         //}
-        else
-        {
-            this.currentScene = "Error";
-        }
+        //else
+        //{
+        //    this.currentScene = "Error";
+        //}
 
         if (this.currentScene == "Game")
         {
@@ -104,7 +116,7 @@ public class AudioManager : MonoBehaviour
                 hasEnteredSongLoop = true;
             }
         }
-        else if (this.currentScene != "Game")
+        else if (this.currentScene == "NoLongerGame")
         {
             StopSound(whatSongIsGonnaPlayNow);
             firstTimeRunning = true;
