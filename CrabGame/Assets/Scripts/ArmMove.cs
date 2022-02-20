@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class ArmMove : MonoBehaviour
 {
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
