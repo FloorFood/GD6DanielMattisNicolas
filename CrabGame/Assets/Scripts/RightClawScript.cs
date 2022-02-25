@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClawScript : MonoBehaviour
+public class RightClawScript : MonoBehaviour
 {
     public GameObject Arm;
     //public GameObject OtherArm;
     private Collider2D ArmCollider;
     //private Collider2D OtherArmCollider;
-    bool LeftClick = false;
+    bool RightClick = false;
     bool HasLetGo = false;
     int Leegos = 0;
 
     void OnTriggerStay2D(Collider2D collision2D)
     {
-        if (LeftClick && Leegos == 1)
+        if (RightClick && Leegos == 1)
         {
             if (collision2D.tag == "leego")
             {
@@ -64,17 +64,17 @@ public class ClawScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             HasLetGo = false;
-            LeftClick = true;
+            RightClick = true;
             //pinch sound
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             HasLetGo = true;
-            LeftClick = false;
+            RightClick = false;
             ArmCollider.enabled = true;
             //OtherArmCollider.enabled = true;
         }
