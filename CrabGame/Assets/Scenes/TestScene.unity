@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 1273002771}
   - component: {fileID: 1273002773}
   m_Layer: 0
-  m_Name: LeftArm
+  m_Name: LeftClaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -932,6 +932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arm: {fileID: 1191379394}
   OtherArm: {fileID: 129720356}
+  player: {fileID: 1515466143}
 --- !u!1 &1515466143
 GameObject:
   m_ObjectHideFlags: 0
