@@ -9,6 +9,7 @@ public class ClawScript : MonoBehaviour
     private Collider2D ArmCollider;
     private Collider2D OtherArmCollider;
     bool LeftClick = false;
+    bool HasLetGo = false;
     int Leegos = 0;
 
     void OnTriggerStay2D(Collider2D collision2D)
@@ -19,6 +20,7 @@ public class ClawScript : MonoBehaviour
             {
                 ArmCollider.enabled = false;
                 OtherArmCollider.enabled = false;
+                collision2D.attachedRigidbody.GetComponent<BoxCollider2D>().isTrigger = true;
                 collision2D.attachedRigidbody.freezeRotation = true;
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
@@ -28,7 +30,13 @@ public class ClawScript : MonoBehaviour
             if (collision2D.tag == "leego")
             {
                 collision2D.attachedRigidbody.freezeRotation = false;
+                collision2D.attachedRigidbody.GetComponent<BoxCollider2D>().isTrigger = false;
             }
+        }
+
+        if (HasLetGo)
+        {
+            collision2D.attachedRigidbody.GetComponent<BoxCollider2D>().isTrigger = false;
         }
     }
 
@@ -58,12 +66,14 @@ public class ClawScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            HasLetGo = false;
             LeftClick = true;
             //pinch sound
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            HasLetGo = true;
             LeftClick = false;
             ArmCollider.enabled = true;
             OtherArmCollider.enabled = true;
