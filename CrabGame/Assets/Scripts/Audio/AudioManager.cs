@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
-        if (sceneName == "TrustScene" || sceneName == "TutorialScene")
+        if (sceneName == "MainScene" || sceneName == "TestScene")
         {
             this.currentScene = "Game";
         }
