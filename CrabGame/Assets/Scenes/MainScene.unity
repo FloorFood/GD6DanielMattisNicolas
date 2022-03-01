@@ -1185,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2920497312015393544, guid: 25ac50cb542295641a8aebc83dda3019, type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1568168409}
     - target: {fileID: 2920497312015393547, guid: 25ac50cb542295641a8aebc83dda3019, type: 3}
       propertyPath: m_Name
       value: KillPlane
@@ -1311,6 +1315,7 @@ MonoBehaviour:
   - {fileID: 5270065274844974353, guid: ef8d2b99bd28fd94d8c6c0c4a064f5ce, type: 3}
   - {fileID: 5270065274844974353, guid: 19c3cbacdf9cb66439cc0bab43e63d34, type: 3}
   - {fileID: 5270065274844974353, guid: 6912ca1d105f0e34589673e4621baf7f, type: 3}
+  numberOfLeegos: 0
   waitingForNextSpawn: 7
   theCountdown: 7
   xMin: -21
