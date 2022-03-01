@@ -567,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501540105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.92, y: 0, z: 0}
+  m_LocalPosition: {x: -19.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1176544118}
@@ -624,6 +624,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1568168409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568168411}
+  - component: {fileID: 1568168410}
+  m_Layer: 0
+  m_Name: LeegoSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1568168410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568168409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72039d5fd2ec79f458b0ff0912491cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theLeegos:
+  - {fileID: 5270065274844974353, guid: 40c7bf4660c5a1f4d8676a4953e6aa24, type: 3}
+  - {fileID: 5270065274844974353, guid: c447922e5764a1a45ade993bda436e51, type: 3}
+  - {fileID: 5270065274844974353, guid: 1d5d4ed8a457bf74b88e735e87715c3c, type: 3}
+  - {fileID: 5270065274844974353, guid: e093c4a9ba6b4b44a914e3eb342547ce, type: 3}
+  - {fileID: 5270065274844974353, guid: 1597efd01225bf24e8c7e8f6d4646e73, type: 3}
+  - {fileID: 5270065274844974353, guid: ef8d2b99bd28fd94d8c6c0c4a064f5ce, type: 3}
+  - {fileID: 5270065274844974353, guid: 19c3cbacdf9cb66439cc0bab43e63d34, type: 3}
+  - {fileID: 5270065274844974353, guid: 6912ca1d105f0e34589673e4621baf7f, type: 3}
+  waitingForNextSpawn: 7
+  theCountdown: 7
+  xMin: -21
+  xMax: -12
+  yMin: 8.84
+  yMax: 9
+--- !u!4 &1568168411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568168409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.82, y: 8.84, z: -3.5449922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9034748597999748086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -678,6 +736,14 @@ PrefabInstance:
     - target: {fileID: 5030489120875260934, guid: 2574b9ec11bc05e408837f12e321112d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384259567385338457, guid: 2574b9ec11bc05e408837f12e321112d, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384259567385338457, guid: 2574b9ec11bc05e408837f12e321112d, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2574b9ec11bc05e408837f12e321112d, type: 3}
