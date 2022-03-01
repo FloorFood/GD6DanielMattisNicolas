@@ -25,6 +25,10 @@ public class RightClawScript : MonoBehaviour
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
         }
+        if (collision2D.tag == "button")
+        {
+            Screenshot();
+        }
         else
         {
             if (collision2D.tag == "leego")
@@ -78,5 +82,18 @@ public class RightClawScript : MonoBehaviour
             ArmCollider.enabled = true;
             //OtherArmCollider.enabled = true;
         }
+    }
+    public void Screenshot()
+    {
+        //possibly animate the button going down.
+        //play camera sound and play a flash.
+        ScreenCapture.CaptureScreenshot("BuiltByCrab");
+        StartCoroutine(Ending());
+        Application.Quit();
+    }
+
+    IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(5);
     }
 }
