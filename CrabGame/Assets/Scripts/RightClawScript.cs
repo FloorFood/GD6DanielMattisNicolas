@@ -74,7 +74,7 @@ public class RightClawScript : MonoBehaviour
         {
             HasLetGo = false;
             RightClick = true;
-            //pinch sound
+            AudioManager.instance.PlaySound("CrabClawSnap");
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -89,6 +89,7 @@ public class RightClawScript : MonoBehaviour
     {
         //possibly animate the button going down.
         //play camera beep sound and maybe animate a flash.
+        AudioManager.instance.PlaySound("CameraReady");
         RightClick = false;
         StartCoroutine(Ending());
     }
@@ -96,7 +97,7 @@ public class RightClawScript : MonoBehaviour
     IEnumerator Ending()
     {
         yield return new WaitForSeconds(5);
-        //play camera shutter sound.
+        AudioManager.instance.PlaySound("CameraSnap");
         Debug.Log("Buttonpressed");
         TakeScreenshot();
 
