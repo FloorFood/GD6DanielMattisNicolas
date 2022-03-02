@@ -24,12 +24,13 @@ public class RightClawScript : MonoBehaviour
                 collision2D.attachedRigidbody.freezeRotation = true;
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
-            else
-            if (collision2D.tag == "button")
-            {
-                Screenshot();
-            }
         }
+            
+        if (RightClick && collision2D.tag == "button")
+        {
+            Screenshot();
+        }
+        
         else
         {
             if (collision2D.tag == "leego")
@@ -88,14 +89,16 @@ public class RightClawScript : MonoBehaviour
     {
         //possibly animate the button going down.
         //play camera sound and play a flash.
+        RightClick = false;
         Debug.Log("Screenshot");
         ScreenCapture.CaptureScreenshot("BuiltByCrab");
         StartCoroutine(Ending());
-        Application.Quit();
     }
 
     IEnumerator Ending()
     {
         yield return new WaitForSeconds(5);
+        Debug.Log("end");
+        Application.Quit();
     }
 }
