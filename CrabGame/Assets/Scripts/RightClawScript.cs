@@ -24,10 +24,11 @@ public class RightClawScript : MonoBehaviour
                 collision2D.attachedRigidbody.freezeRotation = true;
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
-        }
-        if (collision2D.tag == "button")
-        {
-            Screenshot();
+            else
+            if (collision2D.tag == "button")
+            {
+                Screenshot();
+            }
         }
         else
         {
@@ -87,6 +88,7 @@ public class RightClawScript : MonoBehaviour
     {
         //possibly animate the button going down.
         //play camera sound and play a flash.
+        Debug.Log("Screenshot");
         ScreenCapture.CaptureScreenshot("BuiltByCrab");
         StartCoroutine(Ending());
         Application.Quit();

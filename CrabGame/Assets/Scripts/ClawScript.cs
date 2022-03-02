@@ -24,10 +24,11 @@ public class ClawScript : MonoBehaviour
                 collision2D.attachedRigidbody.freezeRotation = true;
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
-        }
-        if (collision2D.tag == "button")
-        {
-            Screenshot();
+            else 
+            if (collision2D.tag == "button")
+            {
+                Screenshot();
+            }
         }
         else
         {
