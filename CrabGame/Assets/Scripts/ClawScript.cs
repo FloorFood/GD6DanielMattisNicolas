@@ -89,17 +89,25 @@ public class ClawScript : MonoBehaviour
     public void Screenshot()
     {
         //possibly animate the button going down.
-        //play camera sound and play a flash.
+        //play camera beep sound and maybe animate a flash.
         LeftClick = false;
-        Debug.Log("Screenshot");
-        ScreenCapture.CaptureScreenshot("BuiltByCrab");
         StartCoroutine(Ending());
     }
 
     IEnumerator Ending()
     {
         yield return new WaitForSeconds(5);
+        //play camera shutter sound.
+        Debug.Log("Buttonpressed");
+        TakeScreenshot();
+
+        yield return new WaitForSeconds(2);
         Debug.Log("end");
         Application.Quit();
+    }
+
+    public void TakeScreenshot()
+    {
+        ScreenCapture.CaptureScreenshot("BuiltByCrab.png");
     }
 }
