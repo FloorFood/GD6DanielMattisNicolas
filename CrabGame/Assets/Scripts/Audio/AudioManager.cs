@@ -106,6 +106,7 @@ public class AudioManager : MonoBehaviour
                 whatSongIsGonnaPlayNow = "MainThemeIntro";
 
                 PlaySong(whatSongIsGonnaPlayNow);
+                PlaySound("Ambience");
                 firstTimeRunning = false;
             }
             else if (!firstTimeRunning)
