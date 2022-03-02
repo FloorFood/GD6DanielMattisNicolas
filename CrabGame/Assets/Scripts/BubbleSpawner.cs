@@ -11,7 +11,7 @@ public class BubbleSpawner : MonoBehaviour
 
     void Start()
     {
-        randomNumber = Random.Range(5, 26);
+        randomNumber = Random.Range(2, 16);
         countdown = randomNumber * 60;
     }
 
@@ -26,8 +26,9 @@ public class BubbleSpawner : MonoBehaviour
         else if (countdown <= 0)
         {
             Instantiate(bubblePrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z + 10), transform.rotation);
-            //Insert code for playing bubble sound
-            randomNumber = Random.Range(5, 26);
+            AudioManager.instance.shouldRandomizePitch = true;
+            AudioManager.instance.PlaySound("Bubbles");
+            randomNumber = Random.Range(8, 26);
             countdown = randomNumber * 60;
         }
     }
