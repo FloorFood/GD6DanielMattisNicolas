@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5270065274844974367}
   - component: {fileID: 5270065274844974366}
   m_Layer: 0
-  m_Name: Leego
+  m_Name: Leego 3
   m_TagString: leego
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ed2da76c837d3fa469c80b8355373bc9, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9590913, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
