@@ -24,6 +24,11 @@ public class ClawScript : MonoBehaviour
                 collision2D.attachedRigidbody.freezeRotation = true;
                 collision2D.attachedRigidbody.transform.position = gameObject.transform.position;
             }
+            else 
+            if (collision2D.tag == "button")
+            {
+                Screenshot();
+            }
         }
         else
         {
@@ -78,5 +83,19 @@ public class ClawScript : MonoBehaviour
             ArmCollider.enabled = true;
             //OtherArmCollider.enabled = true;
         }
+    }
+
+    public void Screenshot()
+    {
+        //possibly animate the button going down.
+        //play camera sound and play a flash.
+        ScreenCapture.CaptureScreenshot("BuiltByCrab");
+        StartCoroutine(Ending());
+        Application.Quit();
+    }
+
+    IEnumerator Ending()
+    {
+        yield return new WaitForSeconds(5);
     }
 }
