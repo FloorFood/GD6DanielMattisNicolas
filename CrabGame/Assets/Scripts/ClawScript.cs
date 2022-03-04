@@ -74,7 +74,7 @@ public class ClawScript : MonoBehaviour
         {
             HasLetGo = false;
             LeftClick = true;
-            //pinch sound
+            AudioManager.instance.PlaySound("CrabClawSnap");
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -89,17 +89,26 @@ public class ClawScript : MonoBehaviour
     public void Screenshot()
     {
         //possibly animate the button going down.
-        //play camera sound and play a flash.
+        //play camera beep sound and maybe animate a flash.
+        AudioManager.instance.PlaySound("CameraReady");
         LeftClick = false;
-        Debug.Log("Screenshot");
-        ScreenCapture.CaptureScreenshot("BuiltByCrab");
         StartCoroutine(Ending());
     }
 
     IEnumerator Ending()
     {
         yield return new WaitForSeconds(5);
+        AudioManager.instance.PlaySound("CameraSnap");
+        Debug.Log("Buttonpressed");
+        TakeScreenshot();
+
+        yield return new WaitForSeconds(2);
         Debug.Log("end");
         Application.Quit();
+    }
+
+    public void TakeScreenshot()
+    {
+        ScreenCapture.CaptureScreenshot("BuiltByCrab.png");
     }
 }
