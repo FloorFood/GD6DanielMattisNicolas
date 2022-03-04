@@ -70,21 +70,21 @@ MonoBehaviour:
     mix: {fileID: 0}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: CrabClawSnap
     clip: {fileID: 8300000, guid: 1a726e05318d73144aeea968feeccbb2, type: 3}
     mix: {fileID: 0}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: CrabFootstep
     clip: {fileID: 8300000, guid: bd7761f97b3a5bd4eb23c4bc9e73c234, type: 3}
     mix: {fileID: 0}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Ambience
     clip: {fileID: 8300000, guid: 26b77450f6af22448938fdba5ffb652d, type: 3}
