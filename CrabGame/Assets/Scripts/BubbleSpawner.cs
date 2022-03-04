@@ -6,13 +6,13 @@ using Random = UnityEngine.Random;
 public class BubbleSpawner : MonoBehaviour
 {
     private int randomNumber;
-    private int countdown;
+    private float countdown;
     public GameObject bubblePrefab;
 
     void Start()
     {
-        randomNumber = Random.Range(2, 16);
-        countdown = randomNumber * 60;
+        randomNumber = Random.Range(2, 13);
+        countdown = (float)randomNumber;
     }
 
     void Update()
@@ -20,16 +20,16 @@ public class BubbleSpawner : MonoBehaviour
         //Debug.Log("Random number is: " + randomNumber);
         if (countdown > 0)
         {
-            countdown--;
+            countdown -= Time.deltaTime;
             //Debug.Log("Countdown left: " + countdown);
         }
         else if (countdown <= 0)
         {
             Instantiate(bubblePrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z + 10), transform.rotation);
             AudioManager.instance.shouldRandomizePitch = true;
-            AudioManager.instance.PlaySound("Bubbles");
-            randomNumber = Random.Range(8, 26);
-            countdown = randomNumber * 60;
+            //AudioManager.instance.PlaySound("Bubbles");
+            randomNumber = Random.Range(8, 21);
+            countdown = (float)randomNumber;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
-    private float deathCountdown = 8.0f; //Does this one need an explonation?
+    private float deathCountdown = 6.0f; //Does this one need an explonation?
     private float speed = 2.2f; //How fast the bubble goes up
     private float frequency = 7.0f; //How fast the bubble swings
     private float magnitude = 0.2f; //How much the bubble swings
@@ -23,7 +23,7 @@ public class Bubble : MonoBehaviour
         pos += transform.up * Time.deltaTime * speed;
         transform.position = pos + axis * Mathf.Sin(Time.time * frequency) * magnitude;
 
-        deathCountdown -= 0.01f;
+        deathCountdown -= Time.deltaTime;
         if (deathCountdown <= 0.0f)
         {
             Destroy(gameObject);
