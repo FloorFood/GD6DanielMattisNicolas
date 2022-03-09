@@ -408,9 +408,9 @@ GameObject:
   - component: {fileID: 1766157897}
   - component: {fileID: 1766157896}
   - component: {fileID: 1766157895}
+  - component: {fileID: 1766157898}
   - component: {fileID: 1766157900}
   - component: {fileID: 1766157899}
-  - component: {fileID: 1766157898}
   - component: {fileID: 1766157901}
   m_Layer: 6
   m_Name: Player
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a029ba0fa075d2e4ba93de6f3bb8f660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 600
   m_CrouchSpeed: 0.5
   m_MovementSmoothing: 0.05
   m_AirControl: 1

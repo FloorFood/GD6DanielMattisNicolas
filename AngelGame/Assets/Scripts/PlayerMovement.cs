@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
+
+	private bool SlidingDone = false;
 
 	[Header("Events")]
 	[Space]
@@ -60,6 +63,12 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
+	IEnumerator Sliding()
+    {
+		yield return new WaitForSeconds(1);
+		SlidingDone = true;
+    }
+
 
 	public void Move(float move, bool crouch, bool jump)
 	{
@@ -86,18 +95,27 @@ public class PlayerMovement : MonoBehaviour
 					OnCrouchEvent.Invoke(true);
 				}
 
-				// Reduce the speed by the crouchSpeed multiplier
-				move *= m_CrouchSpeed;
-
 				// Disable one of the colliders when crouching
 				if (m_CrouchDisableCollider != null)
 					m_CrouchDisableCollider.enabled = false;
+
+				// Reduce the speed by the crouchSpeed multiplier
+				StartCoroutine(Sliding());
+				if (SlidingDone)
+                {
+					move *= m_CrouchSpeed;
+				}
+				
+				//move *= m_CrouchSpeed;
 			}
 			else
 			{
 				// Enable the collider when not crouching
 				if (m_CrouchDisableCollider != null)
+                {
 					m_CrouchDisableCollider.enabled = true;
+					SlidingDone = false;
+				}
 
 				if (m_wasCrouching)
 				{
