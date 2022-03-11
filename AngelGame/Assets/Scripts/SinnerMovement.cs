@@ -7,6 +7,7 @@ public class SinnerMovement : MonoBehaviour
     public float maxMoveSpeed = 10;
     public float smoothTime = 0.3f;
     public float minDistance = 2;
+    public float gravity = 1;
 
     public bool Following = false;
 
@@ -32,7 +33,7 @@ public class SinnerMovement : MonoBehaviour
             playerPosition += ((Vector2)transform.position - playerPosition).normalized * minDistance;
             transform.position = Vector2.SmoothDamp(transform.position, playerPosition, ref currentVelocity, smoothTime, maxMoveSpeed);
 
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = gravity;
         }
         else return;
     }
