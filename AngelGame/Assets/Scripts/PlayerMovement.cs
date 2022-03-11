@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
 	IEnumerator Sliding()
     {
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(0.4f);
 		SlidingDone = true;
     }
 
