@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
-        if (sceneName == "TrustScene" || sceneName == "TutorialScene")
+        if (sceneName == "MainScene" || sceneName == "DanielsTesting")
         {
             this.currentScene = "Game";
         }
@@ -103,7 +103,7 @@ public class AudioManager : MonoBehaviour
             {
                 audioSource = allMyAudioSources[0];
                 //Debug.Log("audioSource: " + audioSource.name);
-                whatSongIsGonnaPlayNow = "MainThemeIntro";
+                whatSongIsGonnaPlayNow = "Music Intro";
 
                 PlaySong(whatSongIsGonnaPlayNow);
                 firstTimeRunning = false;
@@ -118,7 +118,7 @@ public class AudioManager : MonoBehaviour
                 {
                     audioSource = allMyAudioSources[1];
                     //Debug.Log("audioSource: " + audioSource.name);
-                    whatSongIsGonnaPlayNow = "MainThemeLoop";
+                    whatSongIsGonnaPlayNow = "Music Loop";
 
                     PlaySong(whatSongIsGonnaPlayNow);
                     hasEnteredSongLoop = true;
@@ -136,6 +136,7 @@ public class AudioManager : MonoBehaviour
             firstTimeRunning = true;
         }
 
+        //Debug.Log("Current song: " + whatSongIsGonnaPlayNow);
         lastScene = this.currentScene;
     }
 
