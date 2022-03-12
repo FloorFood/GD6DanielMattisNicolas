@@ -13,11 +13,11 @@ public class AngelGaze : MonoBehaviour
 
     public void NewRandomDirection()
     {
-        Eye.GetComponent<IrisController>().EmptyLook();
         int newIndex = Random.Range(0, objectPool.Length);
         objectPool[currentIndex].SetActive(false);
         currentIndex = newIndex;
         objectPool[currentIndex].SetActive(true);
+        Eye.GetComponent<IrisController>().EmptyLook();
     }
 
     private void Update()
