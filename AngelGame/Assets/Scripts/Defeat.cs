@@ -16,7 +16,6 @@ public class Defeat : MonoBehaviour
         Color tmp = Background.GetComponent<SpriteRenderer>().color;
         tmp.a = alpha;
         Background.GetComponent<SpriteRenderer>().color = tmp;
-        StartCoroutine(ButtonOn());
     }
 
     void FixedUpdate()
@@ -25,24 +24,18 @@ public class Defeat : MonoBehaviour
         Color tmp = Background.GetComponent<SpriteRenderer>().color;
         tmp.a = alpha;
         Background.GetComponent<SpriteRenderer>().color = tmp;
-        StartCoroutine(ButtonOn());
 
         if (alpha >= 0.99f)
         {
             Player.SetActive(false);
+            RestartButton.SetActive(true);
+            ExitButton.SetActive(true);
         }
     }
 
     public void ResetAlpha()
     {
         alpha = 0;
-    }
-
-    IEnumerator ButtonOn()
-    {
-        yield return new WaitForSeconds(1f);
-        RestartButton.SetActive(true);
-        ExitButton.SetActive(true);
     }
 
     public void Restart()

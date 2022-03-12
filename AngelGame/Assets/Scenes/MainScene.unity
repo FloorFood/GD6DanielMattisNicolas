@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 130489046}
   m_Layer: 0
   m_Name: Gaze4
-  m_TagString: Untagged
+  m_TagString: Gaze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 831030543096656505, guid: 924fa62f03a7a4b49b477ccf6309a03b, type: 3}
+      propertyPath: m_SortingOrder
+      value: -12
+      objectReference: {fileID: 0}
     - target: {fileID: 831030543121264166, guid: 924fa62f03a7a4b49b477ccf6309a03b, type: 3}
       propertyPath: m_SortingOrder
       value: -6
@@ -392,7 +396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6415094, g: 0.29484478, b: 0.13556422, a: 1}
   m_FlipX: 0
@@ -443,7 +447,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Endscreen: {fileID: 1991408949}
-  Background: {fileID: 2143864529}
 --- !u!1 &444289198
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +857,7 @@ Transform:
   - {fileID: 1268886209}
   - {fileID: 1820727582}
   - {fileID: 130489048}
-  - {fileID: 1928846162}
+  - {fileID: 692879901}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -870,10 +873,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83426035cf081b4f8ed65a358669231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Look1: {fileID: 2078152212}
-  Look2: {fileID: 1268886206}
-  Look3: {fileID: 1820727579}
-  Look4: {fileID: 130489045}
+  objectPool:
+  - {fileID: 2078152212}
+  - {fileID: 1268886206}
+  - {fileID: 1820727579}
+  - {fileID: 130489045}
+  Eye: {fileID: 692879900}
+  repeatTime: 1
+--- !u!1 &692879900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692879901}
+  - component: {fileID: 692879902}
+  m_Layer: 0
+  m_Name: RotationAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &692879901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692879900}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1928846162}
+  m_Father: {fileID: 591760599}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692879902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692879900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c627c6edd0f14e9ea0fd43cbba551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  look1: []
 --- !u!1 &707781227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1097,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6415094, g: 0.29484478, b: 0.13556422, a: 1}
   m_FlipX: 0
@@ -1071,7 +1122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Endscreen: {fileID: 1991408949}
-  Background: {fileID: 2143864529}
 --- !u!61 &708528344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1371,7 +1421,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -8
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 8babd02fbe80f1140bed7422ff25ef20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1468,7 +1518,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -9
+  m_SortingOrder: -11
   m_Sprite: {fileID: 21300000, guid: e1133d576a1811148b49ff67d8288728, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1550,7 +1600,7 @@ GameObject:
   - component: {fileID: 1268886207}
   m_Layer: 0
   m_Name: Gaze2
-  m_TagString: Untagged
+  m_TagString: Gaze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1626,7 +1676,7 @@ GameObject:
   - component: {fileID: 1820727580}
   m_Layer: 0
   m_Name: Gaze3
-  m_TagString: Untagged
+  m_TagString: Gaze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,13 +1891,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928846161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 591760599}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 692879901}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1928846163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1887,7 +1937,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: 8632d3d622b55d14cbf1bab773134279, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2126,7 +2176,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.16037738, g: 0.10442709, b: 0.07928089, a: 1}
   m_FlipX: 0
@@ -2177,11 +2227,11 @@ GameObject:
   - component: {fileID: 2078152215}
   m_Layer: 0
   m_Name: Gaze1
-  m_TagString: Untagged
+  m_TagString: Gaze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2078152213
 Transform:
   m_ObjectHideFlags: 0
@@ -2307,7 +2357,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6415094, g: 0.29484478, b: 0.13556422, a: 1}
   m_FlipX: 0
@@ -2358,7 +2408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Endscreen: {fileID: 1991408949}
-  Background: {fileID: 2143864529}
 --- !u!1 &2143864529
 GameObject:
   m_ObjectHideFlags: 0
