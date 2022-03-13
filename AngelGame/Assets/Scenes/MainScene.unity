@@ -4567,6 +4567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 177409983312754763, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.004021347
+      objectReference: {fileID: 0}
     - target: {fileID: 1490254012032765132, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
       propertyPath: Player
       value: 
@@ -4618,6 +4622,34 @@ PrefabInstance:
     - target: {fileID: 1490254012032765175, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
       propertyPath: m_Name
       value: Pietous Sinner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291508855447137240, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.09906029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291508855447137240, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9950814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072052196593190, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.009541445
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072053142777729, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9866397
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072053142777729, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.16291745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719574947450412973, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.049630005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872128983220651085, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0122194
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
@@ -5225,6 +5257,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 177409983312754763, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0040212725
+      objectReference: {fileID: 0}
     - target: {fileID: 1490254012032765132, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
       propertyPath: Player
       value: 
@@ -5276,6 +5312,34 @@ PrefabInstance:
     - target: {fileID: 1490254012032765175, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
       propertyPath: m_Name
       value: Pietous Sinner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291508855447137240, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.099060945
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291508855447137240, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.99508137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072052196593190, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.009541354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072053142777729, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98663956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277072053142777729, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.16291818
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719574947450412973, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.049630083
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872128983220651085, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.012219413
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6a6bcaa779fce459abd2d8cb85b3d1, type: 3}
