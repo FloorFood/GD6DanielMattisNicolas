@@ -13,6 +13,7 @@ public class GazeOfJudgement : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Church.GetComponent<TempleScript>().ReduceSinner();
+            Church.GetComponent<TempleScript>().IncreaseLost();
         }
         if (collision.gameObject.tag == "Player")
         {
