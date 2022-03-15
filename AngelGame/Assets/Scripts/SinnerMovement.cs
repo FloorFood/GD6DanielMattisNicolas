@@ -8,8 +8,11 @@ public class SinnerMovement : MonoBehaviour
     public float smoothTime = 0.3f;
     public float minDistance = 2;
     public float gravity = 1;
+    float horizontalMove = 0f;
 
     public bool Following = false;
+
+    public Animator animator;
 
     Vector2 currentVelocity;
 
@@ -26,6 +29,10 @@ public class SinnerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        //Debug.Log("Moving at: " + horizontalMove + "speeds/update");
+
         if (Following)
         {
             Vector2 playerPosition = Player.transform.position;
